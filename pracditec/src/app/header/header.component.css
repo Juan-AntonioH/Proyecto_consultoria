@@ -1,0 +1,164 @@
+.top-nav:hover .color-texto {
+  color: rgb(255, 238, 216);
+  box-shadow: 1px 1px rgb(255, 238, 216);
+  transition: ease-in 0.2s;
+}
+
+.top-nav:hover .telefono {
+  color: rgb(51, 255, 0);
+  transition: ease-in 0.2s;
+}
+
+.top-nav:hover .correo {
+  color: rgb(252, 65, 146);
+  transition: ease-in 0.2s;
+}
+
+.top-nav:hover .mapMarker {
+  color: rgb(255, 55, 55);
+  transition: ease-in 0.2s;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.social:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: #16558F;
+}
+
+/* NAV */
+.navbar-toggler {
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 30px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='12 0 30 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='12 0 30 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(202,175,130, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.nav-link:hover {
+  border: 1px solid #D3B574;
+  border-radius: 5px;
+}
+
+.activo {
+  color: #CAAF82;
+}
+
+.contacto {
+  padding: 15px 30px;
+  color: white;
+  background-color: #D3B574;
+  border: none;
+  border-radius: 5px;
+  margin-left: 100px;
+}
+.contacto:hover {
+  color: #16558F;
+  background-color: white;
+  transition: all 0.3s;
+}
+.dropdown-toggle:focus {
+  color: white;
+}
+
+.dropdown-toggle:focus {
+  color: black;
+}
+
+.dropdown-item:hover {
+  color: #CAAF82;
+  border: none;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: -0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    transition: ease-in 0.3s;
+    position: absolute;
+    top: calc(4.8em + 2.5vw);
+    background-color: white;
+    text-align: center;
+    width: 100vw;
+    left: 0;
+  }
+
+  .color-texto {
+    font-size: calc(0.4em + 1vw)
+  }
+
+  .texto-contactos {
+    cursor: pointer;
+    color: #16558F;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px;
+  }
+
+  .texto-contactos:hover {
+    box-shadow: 0px 0px 15px 5px #cda662;
+    background-color: #cda662a8;
+    font-weight: 900;
+    font-size: 14px;
+    transition: ease-in 0.2s;
+  }
+
+  .imagen {
+    width: calc(6em + 15vw);
+  }
+
+  .nav-link {
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .nav-link:hover {
+    color: #CAAF82;
+    border: none;
+  }
+
+  .activo {
+    color: #CAAF82;
+  }
+  .dropdown-menu {
+    text-align: center;
+    transition: ease-in 1s;
+  }
+}

@@ -1,0 +1,98 @@
+<div id="top" class="header">
+    <div class="d-none d-md-block">
+        <div class="row m-0 g--bg-color-82b9e5 text-white py-2 fs-6">
+            <div class="col-sm-8 col-md-10">
+                <div class="d-flex justify-content-start">
+                    <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3" href="tel:+34963708572">
+                        <i class="ms-2 color-texto text-nowrap">
+                            <fa-icon class="telefono me-3" [icon]="faPhone"></fa-icon>
+                            +34 963 708 572</i>
+                    </a>
+                    <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3"
+                        href="mailto:geditec@geditec.es">
+                        <i class="ms-2 color-texto text-nowrap"><fa-icon class="correo me-3"
+                                [icon]="email"></fa-icon>geditec@geditec.es</i>
+                    </a>
+                    <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3"
+                        href="https://goo.gl/maps/udDQX8Dy93wUpYok9" target="_blank">
+                        <i class="ms-2 color-texto text-nowrap"><fa-icon class="mapMarker me-3"
+                                [icon]="mapMarker"></fa-icon>Calle
+                            Mayor 46, Mislata, Valencia</i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="d-flex justify-content-end me-2">
+                    <fa-icon class="social fs-5 px-2 mx-2" [icon]="linkedin"></fa-icon>
+                    <fa-icon class="social fs-5 px-2 ms-2" [icon]="facebook"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg g--bg-color-16558F p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="">
+                <img class="imagen" src="../../assets/images/Logo-GEDITEC.webp" width="150px">
+            </a>
+            <div class="m-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li>
+                            <a class="nav-link" routerLink="nosotros" routerLinkActive="activo">Nosotros</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item py-3 px-4" routerLink="/servicios/obra-civil-industrial" routerLinkActive="activo">Obra civil industrial</a></li>
+                              <li><a class="dropdown-item p-4" routerLink="/servicios/instalaciones-industriales" routerLinkActive="activo">Instalaciones industriales</a></li>
+                              <li><a class="dropdown-item p-4" routerLink="/servicios/distribucion-servicios" routerLinkActive="activo">Distribución y servicios</a></li>
+                                <li><a class="dropdown-item p-4" routerLink="/servicios/edificacion" routerLinkActive="activo">Edificación</a></li>
+                                <li><a class="dropdown-item p-4" routerLink="/servicios/hidraulica" routerLinkActive="activo">Hidráulica</a></li>
+                                <li><a class="dropdown-item p-4" routerLink="/servicios/medioambiente" routerLinkActive="activo">Medioambiente y calidad</a></li>
+                                <li><a class="dropdown-item py-3 px-4" routerLink="/servicios/sector-agroalimentario" routerLinkActive="activo">Sector agroalimentario</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="nav-link" routerLink="/empleo" routerLinkActive="activo">Empleo</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="https://geditec-renovables.es/" target="_blank" routerLinkActive="activo">Renovables</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="contacto d-none d-md-block">
+                <i class="color-texto text-nowrap">
+                    <fa-icon class="telefono me-1" [icon]="faPhone"></fa-icon>
+                    Contacto</i></button>
+            <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="d-block d-md-none">
+        <div class="row bg-white">
+            <div class="col-6 text-center p-3">
+                <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3" href="tel:+34963708572">
+                    <i class="ms-2 texto-contactos text-nowrap">
+                        <fa-icon class="me-2" [icon]="faPhone"></fa-icon>
+                        Llámanos</i>
+                </a>
+            </div>
+            <div class="col-6 text-center p-3 pe-5">
+                <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3" href="tel:+34963708572">
+                    <i class="ms-2 texto-contactos text-nowrap">
+                        <fa-icon class="me-2" [icon]="email"></fa-icon>
+                        Pide Presupuesto</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
