@@ -1,4 +1,4 @@
-<div id="top" class="header">
+<header class="header">
     <div class="d-none d-md-block">
         <div class="row m-0 g--bg-color-82b9e5 text-white py-2 fs-6">
             <div class="col-sm-8 col-md-10">
@@ -47,21 +47,29 @@
                                 aria-expanded="false">
                                 Servicios
                             </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item py-3 px-4" routerLink="/servicios/obra-civil-industrial" routerLinkActive="activo">Obra civil industrial</a></li>
-                              <li><a class="dropdown-item p-4" routerLink="/servicios/instalaciones-industriales" routerLinkActive="activo">Instalaciones industriales</a></li>
-                              <li><a class="dropdown-item p-4" routerLink="/servicios/distribucion-servicios" routerLinkActive="activo">Distribución y servicios</a></li>
-                                <li><a class="dropdown-item p-4" routerLink="/servicios/edificacion" routerLinkActive="activo">Edificación</a></li>
-                                <li><a class="dropdown-item p-4" routerLink="/servicios/hidraulica" routerLinkActive="activo">Hidráulica</a></li>
-                                <li><a class="dropdown-item p-4" routerLink="/servicios/medioambiente" routerLinkActive="activo">Medioambiente y calidad</a></li>
-                                <li><a class="dropdown-item py-3 px-4" routerLink="/servicios/sector-agroalimentario" routerLinkActive="activo">Sector agroalimentario</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item py-3 px-4" routerLink="/servicios/obra-civil-industrial"
+                                        routerLinkActive="activo">Obra civil industrial</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/instalaciones-industriales"
+                                        routerLinkActive="activo">Instalaciones industriales</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/distribucion-servicios"
+                                        routerLinkActive="activo">Distribución y servicios</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/edificacion"
+                                        routerLinkActive="activo">Edificación</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/hidraulica"
+                                        routerLinkActive="activo">Hidráulica</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/medioambiente"
+                                        routerLinkActive="activo">Medioambiente y calidad</a></li>
+                                <li><a class="dropdown-item px-4 py-3" routerLink="/servicios/sector-agroalimentario"
+                                        routerLinkActive="activo">Sector agroalimentario</a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="nav-link" routerLink="/empleo" routerLinkActive="activo">Empleo</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="https://geditec-renovables.es/" target="_blank" routerLinkActive="activo">Renovables</a>
+                            <a class="nav-link" href="https://geditec-renovables.es/" target="_blank"
+                                routerLinkActive="activo">Renovables</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +78,7 @@
                 <i class="color-texto text-nowrap">
                     <fa-icon class="telefono me-1" [icon]="faPhone"></fa-icon>
                     Contacto</i></button>
-            <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler ms-5 col-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,15 +86,15 @@
         </div>
     </nav>
     <div class="d-block d-md-none">
-        <div class="row bg-white">
-            <div class="col-6 text-center p-3">
+        <div class="row m-0 bg-white">
+            <div class="col-5 text-center p-2">
                 <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3" href="tel:+34963708572">
-                    <i class="ms-2 texto-contactos text-nowrap">
+                    <i class="ms-1 texto-contactos text-nowrap">
                         <fa-icon class="me-2" [icon]="faPhone"></fa-icon>
                         Llámanos</i>
                 </a>
             </div>
-            <div class="col-6 text-center p-3 pe-5">
+            <div class="col-6 text-center p-2 pe-5">
                 <a class="top-nav link-light link-offset-4 link-underline-opacity-0 ms-3" href="tel:+34963708572">
                     <i class="ms-2 texto-contactos text-nowrap">
                         <fa-icon class="me-2" [icon]="email"></fa-icon>
@@ -95,4 +103,4 @@
             </div>
         </div>
     </div>
-</div>
+</header>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { faPhone, faEnvelope,faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 
 @Component({
   selector: 'app-header',

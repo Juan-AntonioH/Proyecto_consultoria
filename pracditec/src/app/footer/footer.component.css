@@ -1,0 +1,120 @@
+.list-text-company>li {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.list-text-company>li>a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-servicios-link>li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 10px;
+  padding-top: 6px;
+  border-top: solid 1px;
+  border-color: #DDDDDD66;
+  border-width: 85% !important;
+
+}
+
+.footer-servicios-link>li>a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-servicios-link>li:first-child {
+  border-top: none;
+}
+
+.text-bottom-footer {
+  padding: 20px 20px 25px 20px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.footer-titulos {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.boton-flecha-top {
+  font-family: "Montserrat", Sans-serif;
+  bottom: 0%;
+  right: 0%;
+  margin-bottom: 9px;
+  position: fixed;
+  color: white;
+  background-color: #CAAF82;
+  padding: 24px 30px;
+  width: auto;
+  text-decoration: none;
+  text-align: center;
+  transition: all .3s;
+  display: inline-block;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 900;
+  scroll-behavior: smooth;
+}
+
+.boton-flecha-top:hover {
+  background-color: black;
+}
+
+@media (max-width: 992px) {
+  .boton-flecha-top {
+    padding: 14px 20px;
+  }
+
+  .c-footer-recibir-novedades__titulo {
+    padding: 0px 6vw;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.c-footer-recibir-novedades {
+  width: 85vw;
+  min-height: 180px;
+  background-color: #FFFFFF;
+  padding: 50px 3vw;
+  position: relative;
+  bottom: 40px;
+}
+
+.c-footer-recibir-novedades__titulo {
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: #2B2A2A;
+}
+
+#emailNovedades {
+  color: #16558F;
+  border-color: #16558F;
+  border-width: 1px;
+  padding: 8px 8px 8px 12px;
+}
+
+#botonNovedades {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: capitalize;
+  background-color: #CAAF82;
+  color: white;
+  border: none;
+  min-height: 40px;
+}
+#botonNovedades:hover{
+background-color: #16558F;
+}
