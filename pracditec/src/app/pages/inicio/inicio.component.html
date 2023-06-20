@@ -1,49 +1,69 @@
-<p>inicio works!</p>
-<div id="lipsum">
-  <p>
-  </p>
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-    <li>Proin scelerisque odio fermentum enim dignissim, quis aliquam ligula auctor.</li>
-    <li>Phasellus sollicitudin nisl eget sapien tincidunt tristique.</li>
-    <li>Maecenas nec neque a mauris molestie consequat.</li>
-    <li>Morbi consectetur quam nec libero facilisis, at condimentum purus ullamcorper.</li>
-  </ul>
-  <p></p>
-  <p>
-  </p>
-  <ul>
-    <li>Mauris rhoncus tellus ut rhoncus aliquet.</li>
-    <li>Proin ullamcorper est nec arcu hendrerit vehicula.</li>
-    <li>Aliquam mollis metus ut purus posuere, consequat finibus urna ullamcorper.</li>
-  </ul>
-  <p></p>
-  <p>
-  </p>
-  <ul>
-    <li>Quisque eget nunc hendrerit, malesuada ante vitae, cursus nibh.</li>
-    <li>Duis eget ipsum sit amet lorem ornare lobortis sit amet a nibh.</li>
-    <li>Vivamus in nulla sit amet mi rutrum interdum ac sit amet neque.</li>
-    <li>In ullamcorper est vel libero sagittis egestas.</li>
-    <li>Donec semper nulla ac quam placerat, tincidunt volutpat augue scelerisque.</li>
-  </ul>
-  <p></p>
-  <p>
-  </p>
-  <ul>
-    <li>Aliquam at libero elementum, elementum massa a, tempus nibh.</li>
-    <li>Fusce sed ligula at enim vulputate convallis.</li>
-    <li>Suspendisse at dolor fringilla, fringilla ipsum ut, dapibus augue.</li>
-    <li>Vestibulum dictum purus eget arcu viverra lobortis.</li>
-  </ul>
-  <p></p>
-  <p>
-  </p>
-  <ul>
-    <li>Proin vitae sapien vel tortor facilisis facilisis.</li>
-    <li>Fusce fringilla ipsum sit amet turpis ullamcorper, in consectetur turpis vestibulum.</li>
-    <li>Donec finibus ante a lorem commodo, eget iaculis justo vestibulum.</li>
-    <li>Sed nec risus condimentum, faucibus dolor vitae, fringilla libero.</li>
-  </ul>
-  <p></p>
+<div id="slider-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#slider-carousel" data-bs-slide-to="0" class="boton-carousel active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#slider-carousel" data-bs-slide-to="1" class="boton-carousel"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#slider-carousel" data-bs-slide-to="2" class="boton-carousel"
+      aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#slider-carousel" data-bs-slide-to="3" class="boton-carousel"
+      aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active g--bg-color-16558F">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../../../assets/images/carrousel/caixapopular_mobile.webp" />
+        <img src="../../../assets/images/carrousel/caixapopular.webp" class="d-block w-100" alt="Caixa Popular">
+      </picture>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../../../assets/images/carrousel/sanitas_mobile.webp" />
+        <img src="../../../assets/images/carrousel/sanitas.webp" class="d-block w-100" alt="Sanitas">
+      </picture>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../../../assets/images/carrousel/miarco_mobile.webp" />
+        <img src="../../../assets/images/carrousel/miarco.webp" class="d-block w-100" alt="MIARCO">
+      </picture>
+    </div>
+    <div class="carousel-item">
+      <picture>
+        <source media="(max-width: 768px)" srcset="../../../assets/images/carrousel/ctt_mobile.webp" />
+        <img src="../../../assets/images/carrousel/ctt.webp" class="d-block w-100" alt="CTT Empresa">
+      </picture>
+    </div>
+  </div>
+  <div class="mensaje-carousel">
+    <h1 class="texto-mensaje-carousel">
+      <span class="negrita-cursiva">Desde el 2006</span> proyectando el <span class="negrita-cursiva">futuro.</span>
+    </h1>
+  </div>
 </div>
+<section class="container my-5 position-relative">
+  <div class="row mx-lg-2 mx-md-1 mx-2">
+    <div class="row align-items-center align-items-sm-start align-items-xs-start col-lg-6 col-md-6 col-sm-12 py-3 ps-4 g--bg-color-16558F g--font-family-dm-sans text-white">
+      <div class="col-lg-3 col-md-4 col-sm-12"><fa-icon class="icono-users" [icon]="users"></fa-icon></div>
+      <div class="col-lg-9 col-md-8 col-sm-12 pt-lg-0 ps-sm-0 pt-sm-3 ps-xs-0 pt-xs-3 mt-auto mb-auto"><strong class="fs-5">Más de 300 clientes</strong></div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="texto-info ps-lg-4 ps-md-4">En GEDITEC tenemos una <span style="color: #16558F;"><em><strong>amplia experiencia</strong></em></span> en
+        servicios de ingeniería, arquitectura y consultoría.</div>
+    </div>
+  </div>
+  <div class="row revertir mx-lg-2 mx-md-1 mx-2">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <div class="texto-info pt-lg-4 pt-md-4">
+        Nuestro objetivo es <span style="color: #16558F;"><em><strong>dar un servicio integral y de excelencia</strong></em></span> para generar la máxima satisfacción de nuestros clientes.
+      </div>
+    </div>
+    <div class="row flex-row-reverse align-items-center align-items-sm-end align-items-xs-start col-lg-6 col-md-6 col-sm-12 py-3 ps-4 g--bg-color-16558F g--font-family-dm-sans text-white">
+      <div class="col-lg-3 col-md-4 col-sm-12"><img src="../../../assets/images/IconProyectos.webp" style="width: 80px;"></div>
+      <div class="col-lg-9 col-md-8 col-sm-12 pt-lg-0 ps-sm-0 pt-sm-3 ps-xs-0 pt-xs-3 mt-auto mb-auto"><strong class="fs-5">Proyectos por +100M€</strong></div>
+    </div>
+  </div>
+  <div class="cuadrado-info d-none d-md-block"></div>
+</section>
+
+

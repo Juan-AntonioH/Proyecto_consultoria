@@ -1,0 +1,82 @@
+.carousel-item {
+  transition: all 0.3s;
+}
+
+.carousel-indicators {
+  margin-bottom: 25px;
+}
+
+.carousel-indicators>button {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  margin: 0 12px;
+}
+
+.active {
+  background-color: #16558F;
+}
+
+.mensaje-carousel {
+  display: flex;
+  max-width: 170px;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background-color: #16558F;
+  transform: translateY(-50%);
+}
+
+.texto-mensaje-carousel {
+  font-size: 0.9em;
+  padding: 40px 20px 40px 20px;
+  line-height: 20px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.negrita-cursiva {
+  font-weight: 900;
+  font-style: italic;
+}
+
+.icono-users {
+  font-size: 50px;
+}
+
+.texto-info {
+  font-family: "DM Sans", Sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #7a7a7a;
+}
+
+.cuadrado-info {
+  width: 50px;
+  height: 50px;
+  background-color: #A2C4E0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-75%, -62%)
+}
+
+@media (max-width: 768px) {
+  .mensaje-carousel {
+    display: flex;
+    max-width: 30vw;
+    position: absolute;
+    top: 30%;
+  }
+
+  .texto-info {
+    padding: 20px 0;
+  }
+
+  .revertir {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
