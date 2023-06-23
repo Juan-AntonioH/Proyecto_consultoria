@@ -15,6 +15,7 @@ import { SobreNosotrosComponent } from './pages/componentes/sobre-nosotros/sobre
 import { OfrecemosComponent } from './pages/componentes/ofrecemos/ofrecemos.component';
 import { MensajeComponent } from './pages/componentes/mensaje/mensaje.component';
 import { CasosExitosComponent } from './pages/componentes/casos-exitos/casos-exitos.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CasosExitosComponent } from './pages/componentes/casos-exitos/casos-exi
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
