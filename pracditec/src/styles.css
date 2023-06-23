@@ -482,7 +482,9 @@ template {
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans');
-
+*{
+  scroll-behavior: smooth;
+}
 .g--color-primary {
   color: var(--g-color-primary);
 }
@@ -553,7 +555,6 @@ template {
 
 body {
   background-color: #F0F0F0;
-  scroll-behavior: smooth;
   line-height: 1.5;
 }
 
