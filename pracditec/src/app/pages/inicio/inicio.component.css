@@ -102,11 +102,11 @@
   font-family: "DM Sans", Sans-serif;
   margin-top: -10px !important;
   padding-top: -20px;
-  padding-right:18px;
+  padding-right: 18px;
   margin-bottom: 20px;
   background-color: #16558F;
   overflow: hidden;
-  transition: 0.3s ease-out;
+  transition: 0.4s ease-out;
 }
 
 .activo:after {
@@ -115,6 +115,37 @@
   padding: 0px 5px;
   color: #16558F;
   border-radius: 2px;
+}
+
+.contenedor-renovables {
+  position: relative;
+  border-radius: 0 20px;
+  right: 40px;
+}
+
+.imgage-logo-renovables {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.btn-presupuesto {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #6DD67C;
+  border-radius: 0 20px;
+  width: auto;
+  text-decoration: none;
+}
+
+.text-presupuesto {
+  font-family: "DM Sans", Sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+
+.padding-renovables {
+  padding: 15%;
 }
 
 @media (max-width: 768px) {
@@ -132,5 +163,14 @@
   .revertir {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .contenedor-renovables {
+    border-radius: 0;
+    right: 0px;
+  }
+
+  .imgage-logo-renovables{
+    width: 100%;
   }
 }

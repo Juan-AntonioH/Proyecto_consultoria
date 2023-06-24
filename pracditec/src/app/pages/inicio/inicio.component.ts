@@ -9,12 +9,12 @@ import { InicioService } from 'src/app/servicios/inicio.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-  constructor(private acordeonService: InicioService) {}
+  constructor(private acordeonService: InicioService) { }
 
   users = faUsers;
   acordeones!: Acordeon[]
   maxHeights: number[] = []
-  industrial:string[]=[
+  industrial: string[] = [
     "logo-acciona",
     "logo-acento-laboratorios",
     "logo-alvinox",
@@ -49,7 +49,7 @@ export class InicioComponent {
     "logo-lacteos-roma"
   ]
 
-  servicios:string[]=[
+  servicios: string[] = [
     "logo_yelmo_cines",
     "logo-aguas-calpe",
     "logo-caixa-popular",
@@ -69,7 +69,7 @@ export class InicioComponent {
     "logo_wayco"
   ]
 
-  edificacion:string[]=[
+  edificacion: string[] = [
     "logo-acciona",
     "logo-active",
     "logo-aldaia",
@@ -90,7 +90,7 @@ export class InicioComponent {
     "logo_vila"
   ]
 
-  hidraulica:string[]=[
+  hidraulica: string[] = [
     "logo-amislata-yuntamiento",
     "logo-comunidad-regantes-ondara",
     "logo-comunindad-regants-pedreguer",
@@ -111,7 +111,7 @@ export class InicioComponent {
     } else {
       acordeon.estado = "activo"
       setTimeout(() => {
-        this.maxHeights[id] = document.getElementById("accordion_panel" + id)!.scrollHeight
+        this.maxHeights[id] = document.getElementById("accordion_panel" + id)!.scrollHeight + 200
       }, 1);
 
     }
