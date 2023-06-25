@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-mensaje',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mensaje.component.css']
 })
 export class MensajeComponent {
-
+  @Input() cliente_mensaje!:any
 }

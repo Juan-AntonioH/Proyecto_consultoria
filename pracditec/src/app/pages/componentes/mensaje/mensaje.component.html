@@ -1,1 +1,15 @@
-<p>mensaje works!</p>
+<div class="container-fluid g--bg-color-CAAF82 c-mensaje">
+  <div class="c-mensaje__texto">
+    {{cliente_mensaje.mensaje}}
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="pe-3">
+      <img class="c-mensaje__img" src="../../../../assets/images/clientes/{{cliente_mensaje.img}}.webp"
+        alt="cliente_mensaje.nombre">
+    </div>
+    <div>
+      <p class="fs-5 fw-semibold text-white">{{cliente_mensaje.nombre}}</p>
+      <p class="text-white">{{cliente_mensaje.profesion}}</p>
+    </div>
+  </div>
+</div>

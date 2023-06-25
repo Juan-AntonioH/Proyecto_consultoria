@@ -1,0 +1,42 @@
+.c-mensaje {
+  display: flex;
+  padding: 100px 80px;
+  flex-direction: column;
+}
+
+.c-mensaje__texto {
+  padding: 0px 200px 20px 200px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #FFFFFF;
+  font-family: "Merriweather", Sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.c-mensaje__img {
+  width: 55px;
+  height: 55px;
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: #FFFFFF;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .c-mensaje {
+    padding: 30px 0 100px 0;
+  }
+
+  .c-mensaje__texto {
+    padding: 20px 30px;
+    font-size: 17px;
+    line-height: 1.4em;
+  }
+}
