@@ -1,0 +1,40 @@
+.titulo-gradient {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #16558F 18%, #CAAF82 80%);
+}
+
+.fondo-titulo {
+  opacity: 0.5;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+}
+
+.c-tituloServicios {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  min-height: 300px;
+  max-width: 1140px;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-tituloServicios__tipo {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: "DM Sans", Sans-serif;
+  font-weight: 400;
+  line-height: 1px;
+  letter-spacing: 5px;
+  padding-bottom: 10px;
+
+}
+
+.c-tituloServicios__titulo {
+  color: #FFFFFF;
+  font-family: "DM Sans", Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}

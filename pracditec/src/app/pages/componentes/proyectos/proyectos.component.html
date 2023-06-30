@@ -1,1 +1,23 @@
-<p>proyectos works!</p>
+<div class="contenedor-proyectos">
+  <div class="container-fluid px-lg-5 px-sm-0">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-12">
+        <app-proyecto></app-proyecto>
+      </div>
+      <div class="col-lg-5 col-md-5 col-sm-12 px-lg-0 px-sm-3">
+        <div class="c-ejemplosProyectos">
+          <h2 class="c-ejemplosProyectos__titulo">{{tituloProyectos}}</h2>
+          <ul class="c-ejemplosProyectos__list">
+            <li *ngFor="let proyecto of listaProyectos">
+              <div class="c-ejemplosProyectos__elementor-list">
+                <span> <i><fa-icon style="font-size: 14px;" [icon]="faDotCircle"></fa-icon></i></span>
+                <span class="ps-2">{{proyecto}}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- c-ejemplosProyectos__elementor-list -->

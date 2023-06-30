@@ -1,0 +1,22 @@
+.cualidad {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 3px solid;
+  padding: 50px 35px 50px 20px;
+  font-family: "DM Sans", Sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.titulo {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 40px;
+  padding-bottom: 12px;
+}
+.cualidad:hover{
+  transform: scale(1.03);
+  transition: ease-in-out 0.3s;
+}
+

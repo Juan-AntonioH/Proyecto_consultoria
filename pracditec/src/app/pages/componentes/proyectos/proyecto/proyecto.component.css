@@ -1,0 +1,57 @@
+.proyecto-titulo {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.mensaje-proyecto {
+  color: #16558F;
+  font-size: 40px;
+  line-height: 1em;
+  font-weight: bold;
+  padding-right: 100px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.element-divider {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.bar-separator {
+  border-bottom: solid 2px #A2C4E0;
+  width: 10%;
+  margin-bottom: 20px;
+}
+
+.boton-contacto-proyectos {
+  text-decoration: none;
+  color: white;
+  background-color: #CAAF82;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 1px;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .proyecto-titulo {
+    text-align: center;
+  }
+
+  .mensaje-proyecto {
+    padding-right: 0;
+    font-size: 22px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .element-divider {
+    justify-content: center;
+  }
+}

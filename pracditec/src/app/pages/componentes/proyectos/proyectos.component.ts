@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent {
-
+  faDotCircle = faDotCircle;
+  @Input() tituloProyectos!:string
+  @Input() listaProyectos!:string[]
 }

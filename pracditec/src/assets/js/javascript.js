@@ -1,3 +1,7 @@
+function luis(){
+  console.log("hola")
+}
+
 $(function() {
   $('.center').slick({
     infinite: true,
@@ -53,7 +57,5 @@ $(function() {
       }
     ]
   });
-
   $('.slick-dots li:nth-child(-n+3) button').addClass('.slick-active button:before');
-
 });

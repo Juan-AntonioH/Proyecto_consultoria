@@ -1,0 +1,42 @@
+.c-ejemplosProyectos {
+  background-color: #16558F;
+  padding: 40px 40px;
+  color: white;
+  font-family: "DM Sans", Sans-serif;
+}
+
+.c-ejemplosProyectos__titulo {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-bottom: 20px;
+}
+
+.c-ejemplosProyectos__list li:not(:last-child)::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #DDDDDD66;
+  width: 85%;
+  padding-bottom: 8px;
+  margin-bottom: 5px;
+}
+
+.c-ejemplosProyectos__icon {
+  font-size: 14px;
+}
+
+.c-ejemplosProyectos__elementor-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contenedor-proyectos {
+  padding: 100px 0 35px 0;
+}
+
+@media (max-width: 768px) {
+  .contenedor-proyectos {
+    padding: 35px 0;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, Renderer2} from '@angular/core';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Acordeon } from 'src/app/modelos/acordeon';
 import { InicioService } from 'src/app/servicios/inicio.service';
@@ -9,7 +9,7 @@ import { InicioService } from 'src/app/servicios/inicio.service';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-  constructor(private acordeonService: InicioService) { }
+  constructor(private acordeonService: InicioService,private renderer: Renderer2) { }
 
   users = faUsers;
   acordeones!: Acordeon[]
@@ -116,10 +116,17 @@ export class InicioComponent {
 
     }
   }
+  loadScript() {
+    const script = this.renderer.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'assets/js/javascript.js';
+    this.renderer.appendChild(document.body, script);
+  }
 
   ngOnInit() {
     this.acordeones = this.acordeonService.getAcordeones()
     this.maxHeights = Array(this.acordeones.length).fill(0);
+    this.loadScript();
   }
 
 }

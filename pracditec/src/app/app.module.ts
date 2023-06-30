@@ -16,6 +16,10 @@ import { OfrecemosComponent } from './pages/componentes/ofrecemos/ofrecemos.comp
 import { MensajeComponent } from './pages/componentes/mensaje/mensaje.component';
 import { CasosExitosComponent } from './pages/componentes/casos-exitos/casos-exitos.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { CualidadesComponent } from './pages/componentes/cualidades/cualidades.component';
+import { CualidadComponent } from './pages/componentes/cualidades/cualidad/cualidad.component';
+import { ObraCivilIndustrialComponent } from './pages/obra-civil-industrial/obra-civil-industrial.component';
+import { ProyectoComponent } from './pages/componentes/proyectos/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     SobreNosotrosComponent,
     OfrecemosComponent,
     MensajeComponent,
-    CasosExitosComponent
+    CasosExitosComponent,
+    CualidadesComponent,
+    CualidadComponent,
+    ObraCivilIndustrialComponent,
+    ProyectoComponent
   ],
   imports: [
     BrowserModule,
