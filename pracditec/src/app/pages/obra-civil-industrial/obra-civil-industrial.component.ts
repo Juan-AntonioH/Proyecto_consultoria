@@ -5,6 +5,7 @@ import { Component, Renderer2 } from '@angular/core';
   templateUrl: './obra-civil-industrial.component.html',
   styleUrls: ['./obra-civil-industrial.component.css']
 })
+
 export class ObraCivilIndustrialComponent {
   constructor(private renderer: Renderer2) { }
   tituloInicial = {
@@ -47,8 +48,10 @@ export class ObraCivilIndustrialComponent {
     "logo-miarco",
     "logo-lacteos-roma"
   ]
-  tituloProyectos:string = "Ejemplos de proyectos de Obra Civil industrial"
-  listaProyectos:string[] =[
+
+  tituloProyectos: string = "Ejemplos de proyectos de Obra Civil industrial"
+
+  listaProyectos: string[] = [
     "Almacenes industriales",
     "Talleres de vehículos, concesionarios",
     'Naves "nido" para promociones',
@@ -57,6 +60,7 @@ export class ObraCivilIndustrialComponent {
     "Industria química",
     "Gestión de subvenciones"
   ]
+
   loadScript() {
     const script = this.renderer.createElement('script');
     script.type = 'text/javascript';

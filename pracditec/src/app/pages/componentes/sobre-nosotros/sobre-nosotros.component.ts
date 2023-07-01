@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-sobre-nosotros',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sobre-nosotros.component.css']
 })
 export class SobreNosotrosComponent {
-
+  check = faCheck
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pracditec';
+
+  // ngOnInit() {
+  //   Swal.fire({
+  //     icon: 'info',
+  //     title: 'Esta página web es un proyecto didáctico que no tiene nada que ver con la página web original de GEDITEC'
+  //   })
+  // }
 }
