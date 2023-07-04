@@ -1,18 +1,17 @@
 import { Component, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-obra-civil-industrial',
-  templateUrl: './obra-civil-industrial.component.html',
-  styleUrls: ['./obra-civil-industrial.component.css']
+  selector: 'app-instalaciones-industriales',
+  templateUrl: './instalaciones-industriales.component.html',
+  styleUrls: ['./instalaciones-industriales.component.css']
 })
-
-export class ObraCivilIndustrialComponent {
+export class InstalacionesIndustrialesComponent {
   constructor(private renderer: Renderer2) { }
 
   tituloInicial = {
     "tipo": "servicios",
-    "titulo": "Obra civil Industrial",
-    "imagen": "fondo-obra-civil"
+    "titulo": "Instalaciones Industriales",
+    "imagen": "fondo-industriales"
   }
 
   industrial: string[] = [
@@ -50,29 +49,31 @@ export class ObraCivilIndustrialComponent {
     "logo-lacteos-roma"
   ]
 
-  tituloProyectos: string = "Ejemplos de proyectos de Obra Civil industrial"
+  tituloProyectos: string = "Servicios Instalaciones Industriales"
 
   listaProyectos: string[] = [
-    "Almacenes industriales",
-    "Talleres de vehículos, concesionarios",
-    'Naves "nido" para promociones',
-    "Centros logísticos",
-    "Industria agroalimentaria",
-    "Industria química",
-    "Gestión de subvenciones"
+    "Instalaciones Fotovoltaicas",
+    "Instalaciones fototérmicas",
+    'Instalaciones eléctricas',
+    "Instalaciones de climatización",
+    "Instalaciones de protección contra incendios",
+    "Instalaciones frigoríficas",
+    "Instalaciones de aire comprimido",
+    "Instalaciones de fontanería y agua potable",
+    "Instalaciones de calderas",
+    "Estudios acústicos y de aislamiento de sonido"
   ]
-  imagenesExitos: string[]=[
-    'nave_metal',
-    'lacteos',
-    'PENASOL_FINAL_ok',
-    'MIARCO1'
+  imagenesExitos: string[] = [
+    'MG_7740',
+    'MG_7773',
+    'MG_8608'
   ]
 
   cliente_mensaje = {
-    "mensaje": '"Personal súper atento y amable, trato personalizado con muy buena comunicación. Asesoramiento profesional en todo momento que denota la amplia experiencia que tienen en el sector. Totalmente recomendable."',
-    "nombre": "Javier Ponce",
+    "mensaje": '"Con toda la burocracia y trámites burocráticos relacionados con licencias, permisos y regulaciones, GEDITEC lo hace todo fácil. ¡Muy recomendable!"',
+    "nombre": "Omar Eid",
     "profesion": "Cliente GEDITEC INGENIERÍA",
-    "img":"Javier_Ponce"
+    "img": "Omar_Eid"
   }
 
   loadScript() {

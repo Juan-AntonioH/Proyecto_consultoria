@@ -21,6 +21,15 @@ import { CualidadesComponent } from './pages/componentes/cualidades/cualidades.c
 import { CualidadComponent } from './pages/componentes/cualidades/cualidad/cualidad.component';
 import { ObraCivilIndustrialComponent } from './pages/obra-civil-industrial/obra-civil-industrial.component';
 import { ProyectoComponent } from './pages/componentes/proyectos/proyecto/proyecto.component';
+import { InstalacionesIndustrialesComponent } from './pages/instalaciones-industriales/instalaciones-industriales.component';
+import { DistribucionServiciosComponent } from './pages/distribucion-servicios/distribucion-servicios.component';
+import { EdificacionComponent } from './pages/edificacion/edificacion.component';
+import { MedioambienteComponent } from './pages/medioambiente/medioambiente.component';
+import { HidraulicaComponent } from './pages/hidraulica/hidraulica.component';
+import { SectorAgroalimentarioComponent } from './pages/sector-agroalimentario/sector-agroalimentario.component';
+import { EmpleoComponent } from './pages/empleo/empleo.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +48,16 @@ import { ProyectoComponent } from './pages/componentes/proyectos/proyecto/proyec
     CualidadesComponent,
     CualidadComponent,
     ObraCivilIndustrialComponent,
-    ProyectoComponent
+    ProyectoComponent,
+    InstalacionesIndustrialesComponent,
+    DistribucionServiciosComponent,
+    EdificacionComponent,
+    MedioambienteComponent,
+    HidraulicaComponent,
+    SectorAgroalimentarioComponent,
+    EmpleoComponent,
+    ContactoComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
