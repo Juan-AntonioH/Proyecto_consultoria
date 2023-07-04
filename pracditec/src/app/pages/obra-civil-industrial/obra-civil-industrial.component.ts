@@ -67,6 +67,13 @@ export class ObraCivilIndustrialComponent {
     'MIARCO1'
   ]
 
+  cliente_mensaje = {
+    "mensaje": '"Personal súper atento y amable, trato personalizado con muy buena comunicación. Asesoramiento profesional en todo momento que denota la amplia experiencia que tienen en el sector. Totalmente recomendable."',
+    "nombre": "Javier Ponce",
+    "profesion": "Cliente GEDITEC INGENIERÍA",
+    "img":"Javier_Ponce"
+  }
+
   loadScript() {
     const script = this.renderer.createElement('script');
     script.type = 'text/javascript';

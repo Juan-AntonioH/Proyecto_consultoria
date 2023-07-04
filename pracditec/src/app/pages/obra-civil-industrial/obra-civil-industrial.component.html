@@ -1,10 +1,8 @@
 <section>
-<app-titulo-inicial [tituloInicial]="tituloInicial"></app-titulo-inicial>
+  <app-titulo-inicial [tituloInicial]="tituloInicial"></app-titulo-inicial>
 </section>
 <section>
-  <app-proyectos
-  [tituloProyectos]="tituloProyectos"
-  [listaProyectos]="listaProyectos"></app-proyectos>
+  <app-proyectos [tituloProyectos]="tituloProyectos" [listaProyectos]="listaProyectos"></app-proyectos>
 </section>
 <section>
   <app-ofrecemos></app-ofrecemos>
@@ -26,4 +24,9 @@
 <section>
   <app-sobre-nosotros></app-sobre-nosotros>
 </section>
-<div style="height: 100px;"></div>
+<section>
+  <app-cualidades id="cualidades"></app-cualidades>
+</section>
+<section>
+  <app-mensaje [cliente_mensaje]="cliente_mensaje"></app-mensaje>
+</section>
