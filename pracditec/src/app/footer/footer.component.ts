@@ -7,4 +7,14 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 })
 export class FooterComponent {
   flechaArriba = faArrowUp;
+
+  scrollToTop(): void {
+    (function smoothscroll(): void {
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(smoothscroll);
+        window.scrollTo(0, 0);
+      }
+    })();
+  }
 }

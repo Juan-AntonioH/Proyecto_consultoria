@@ -60,15 +60,24 @@ export class ObraCivilIndustrialComponent {
     "Industria química",
     "Gestión de subvenciones"
   ]
+  imagenesExitos: string[]=[
+    'nave_metal',
+    'lacteos',
+    'PENASOL_FINAL_ok',
+    'MIARCO1'
+  ]
 
   loadScript() {
     const script = this.renderer.createElement('script');
     script.type = 'text/javascript';
+    script.async = true;
     script.src = 'assets/js/javascript.js';
     this.renderer.appendChild(document.body, script);
   }
 
   ngOnInit() {
-    this.loadScript();
+    setTimeout(() => {
+      this.loadScript();
+    }, 0);
   }
 }
