@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
     trigger('exitos', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('800ms', style({ opacity: 1 }))
+        animate('300ms', style({ opacity: 1 }))
       ])
     ])
   ]
@@ -48,6 +48,6 @@ export class CasosExitosComponent {
   cargarAnimacion() {
     setInterval(() => {
       this.currentIndex++;
-    }, 800);
+    }, 300);
   }
 }

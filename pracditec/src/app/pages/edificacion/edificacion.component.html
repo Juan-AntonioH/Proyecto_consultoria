@@ -1,1 +1,32 @@
-<p>edificacion works!</p>
+<section>
+  <app-titulo-inicial [tituloInicial]="tituloInicial"></app-titulo-inicial>
+</section>
+<section>
+  <app-proyectos [mensajeProyecto]="mensajeProyecto" [tituloProyectos]="tituloProyectos" [listaProyectos]="listaProyectos"></app-proyectos>
+</section>
+<section>
+  <app-ofrecemos></app-ofrecemos>
+</section>
+<section>
+  <app-casos-exitos [imagenesExitos]="imagenesExitos"></app-casos-exitos>
+</section>
+<section class="container-fluid py-5" style="background-color: #A2C4E080;">
+  <div class="container">
+    <div class="g--font-family-dm-sans fw-medium fs-4 pb-5 g--color-2B2A2A">
+      <p><em><strong class="fst-italic">Confían</strong></em> en nosotros</p>
+    </div>
+    <div class="g--color-2B2A2A fs-6 g--font-family-dm-sans text-uppercase pb-3">
+      <p>Sector EDIFICACIÓN</p>
+    </div>
+    <app-slider-publicitario [slider]="edificacion"></app-slider-publicitario>
+  </div>
+</section>
+<section>
+  <app-sobre-nosotros></app-sobre-nosotros>
+</section>
+<section>
+  <app-cualidades id="cualidades"></app-cualidades>
+</section>
+<section>
+  <app-mensaje [cliente_mensaje]="cliente_mensaje"></app-mensaje>
+</section>

@@ -49,6 +49,7 @@ export class ObraCivilIndustrialComponent {
     "logo-miarco",
     "logo-lacteos-roma"
   ]
+  mensajeProyecto :string = "Proyección, construcción y mantenimiento de Infraestructuras para Industrias"
 
   tituloProyectos: string = "Ejemplos de proyectos de Obra Civil industrial"
 

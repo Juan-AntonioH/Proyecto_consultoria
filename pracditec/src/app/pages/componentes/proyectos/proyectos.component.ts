@@ -8,6 +8,7 @@ import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProyectosComponent {
   faDotCircle = faDotCircle;
+  @Input() mensajeProyecto!:string
   @Input() tituloProyectos!:string
   @Input() listaProyectos!:string[]
 }

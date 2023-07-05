@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./empleo.component.css']
 })
 export class EmpleoComponent {
-
+  tituloInicial = {
+    "tipo": "BUSCAMOS TALENTO",
+    "titulo": "Empleo en GEDITEC Ingeniería",
+    "imagen": "fondo-obra-civil"
+  }
 }

@@ -48,6 +48,7 @@ export class InstalacionesIndustrialesComponent {
     "logo-miarco",
     "logo-lacteos-roma"
   ]
+  mensajeProyecto: string = "Expertos en gestión de proyectos para mejorar procesos productivos industriales"
 
   tituloProyectos: string = "Servicios Instalaciones Industriales"
 

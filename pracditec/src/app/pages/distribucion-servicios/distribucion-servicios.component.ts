@@ -34,6 +34,8 @@ export class DistribucionServiciosComponent {
     "logo_wayco"
   ]
 
+  mensajeProyecto: string = "Soluciones eficientes y adaptadas a las necesidades de cada proyecto"
+
   tituloProyectos: string = "Ejemplos de proyectos de Servicios y Distribución"
 
   listaProyectos: string[] = [
@@ -45,7 +47,7 @@ export class DistribucionServiciosComponent {
     "Oficinas bancarias y seguros",
     "Clínicas e instalaciones sanitarias"
   ]
-  imagenesExitos: string[]=[
+  imagenesExitos: string[] = [
     'caixapopular',
     'oficina',
     'decathlon'
@@ -55,7 +57,7 @@ export class DistribucionServiciosComponent {
     "mensaje": '"Personal súper atento y amable, trato personalizado con muy buena comunicación. Asesoramiento profesional en todo momento que denota la amplia experiencia que tienen en el sector. Totalmente recomendable."',
     "nombre": "Javier Ponce",
     "profesion": "Cliente GEDITEC INGENIERÍA",
-    "img":"Javier_Ponce"
+    "img": "Javier_Ponce"
   }
 
   loadScript() {

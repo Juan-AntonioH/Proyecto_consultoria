@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,4 +8,5 @@ import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProyectoComponent {
 arrowRight = faLongArrowAltRight
+@Input() mensajeProyecto!:string
 }

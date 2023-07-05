@@ -11,11 +11,13 @@ import { MedioambienteComponent } from './pages/medioambiente/medioambiente.comp
 import { SectorAgroalimentarioComponent } from './pages/sector-agroalimentario/sector-agroalimentario.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { EmpleoComponent } from './pages/empleo/empleo.component';
 
 const routes: Routes = [
   { path: "", component: InicioComponent },
   { path: "nosotros", component: NosotrosComponent },
   { path: "contacto", component: ContactoComponent },
+  { path: "empleo", component: EmpleoComponent },
   { path: "servicios/obra-civil-industrial", component: ObraCivilIndustrialComponent },
   { path: "servicios/instalaciones-industriales", component: InstalacionesIndustrialesComponent },
   { path: "servicios/distribucion-servicios", component: DistribucionServiciosComponent },
