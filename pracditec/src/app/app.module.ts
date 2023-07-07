@@ -30,6 +30,7 @@ import { SectorAgroalimentarioComponent } from './pages/sector-agroalimentario/s
 import { EmpleoComponent } from './pages/empleo/empleo.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { ContactosComponent } from './pages/componentes/contactos/contactos.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { Error404Component } from './pages/error404/error404.component';
     SectorAgroalimentarioComponent,
     EmpleoComponent,
     ContactoComponent,
-    Error404Component
+    Error404Component,
+    ContactosComponent
   ],
   imports: [
     BrowserModule,

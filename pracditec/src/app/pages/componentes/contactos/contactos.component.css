@@ -1,0 +1,12 @@
+.tipoContacto {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  transition: all .4s;
+}
+
+.tipoContacto:hover {
+  transform: scale(1.03);
+}

@@ -1,0 +1,9 @@
+<div class="p-2">
+<a href="{{contacto.ruta}}" class="tipoContacto p-4" [ngStyle]="{'background-color': contacto.background}">
+  <div class="text-center">
+    <h2 class="mb-3 fw-semibold fs-4">{{contacto.titulo}}</h2>
+    <p class="mb-4" [innerHTML]="contacto.mensaje"></p>
+    <p class="mb-2">{{contacto.tipo}} →</p>
+  </div>
+</a>
+</div>

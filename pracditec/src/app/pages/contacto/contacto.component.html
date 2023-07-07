@@ -1,1 +1,59 @@
-<p>contacto works!</p>
+<section>
+  <app-titulo-inicial [tituloInicial]="tituloInicial"></app-titulo-inicial>
+</section>
+<section>
+  <div class="container-fluid py-5 row">
+    <app-contactos *ngFor="let contacto of contactos" [contacto]="contacto" class="col-lg-4 col-md-4 col-sm-12">
+    </app-contactos>
+  </div>
+</section>
+<section>
+  <div class="container-fluid g--bg-color-2B2A2A text-white g--font-family-dm-sans py-5">
+    <h2 class="tituloContacto">Contacta con nosotros</h2>
+    <form class="c-formContacto">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+          <input id="nombre" class="c-formContacto__input w-100" type="text" name="nombre" placeholder="Nombre completo"
+            required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <input id="email" class="c-formContacto__input w-100" type="text" name="email" placeholder="Email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+          <input id="movil" class="c-formContacto__input w-100" type="text" name="movil" placeholder="Móvil" required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <input id="empresa" class="c-formContacto__input w-100" type="text" name="empresa" placeholder="Empresa"
+            required>
+        </div>
+      </div>
+      <div class="text-black mb-3">
+        <textarea class="c-formContacto__input" id="mensajeContacto" name="mensajeContacto"
+          placeholder="Mensaje"></textarea>
+      </div>
+      <input id="file" class="c-formContacto__file" type="file" name="file" required>
+      <div class="d-flex text-wrap mb-lg-0 mb-md-0 mb-2 ">
+        <input id="check" class="c-formContacto__check" type="checkbox" name="check" required>
+        <label for="check">Acepto las políticas de privacidad y registro de datos.</label>
+      </div>
+      <div class="mb-2">
+        <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LfcA50mAAAAANq7Ih-2a5qceIsMoP4PyOfvMivX&amp;co=aHR0cHM6Ly9nZWRpdGVjLmVzOjQ0Mw..&amp;hl=es&amp;type=v3&amp;v=khH7Ei3klcvfRI74FvDcfuOo&amp;size=invisible&amp;badge=inline&amp;sa=Form&amp;cb=ua23m46ypkpa" role="presentation" name="a-p3n6r4360rsy" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="256" height="60" frameborder="0"></iframe>
+      </div>
+      <div class="d-flex justify-content-center">
+        <button id="btnForm" class="c-formContacto__boton" type="button">ENVIAR CONSULTA</button>
+      </div>
+    </form>
+  </div>
+</section>
+<section>
+  <div class="container py-5">
+    <div>
+      <iframe class="contacto-maps" loading="lazy"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCeqjeQwmBQyKpb-7gB4PYLCXaEINNfRVo&amp;q=GEDITEC%20Ingenier%C3%ADa%2C%20Carrer%20Major%2C%2046%2C%2046920%20Mislata%2C%20Valencia&amp;zoom=15"
+        title="Calle Perdida, nº 99, Bajo. 46920 Mislata (Valencia)"
+        aria-label="Calle Perdida, nº 99, Bajo. 46920 Mislata (Valencia)"></iframe>
+    </div>
+  </div>
+</section>
