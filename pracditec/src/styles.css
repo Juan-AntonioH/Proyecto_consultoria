@@ -483,7 +483,7 @@ template {
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans');
 *{
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 .g--color-primary {
   color: var(--g-color-primary);
