@@ -23,10 +23,10 @@ export class ContactoComponent {
       tipo: "Enviar correo"
     },
     {
-      ruta: "tel:+34963708572",
+      ruta: "tel:+34123456789",
       background: "#A2C4E0",
       titulo: "Llámanos",
-      mensaje: "Teléfono Oficinas Centrales<br>+34 646 567 689",
+      mensaje: "Teléfono Oficinas Centrales<br>+34 123 456 789",
       tipo: "Llamar"
     },
     {
