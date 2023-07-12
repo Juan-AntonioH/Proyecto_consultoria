@@ -21,9 +21,10 @@ export class AppComponent {
         this.scrollService.scrollToTop();
       });
 
-    Swal.fire({
-      icon: 'info',
-      title: 'Esta página web es un proyecto didáctico que no tiene nada que ver con la página web original de GEDITEC'
-    })
+    // Swal.fire({
+    //   icon: 'info',
+    //   title: 'Esta página web es un proyecto didáctico que no tiene nada que ver con la página web original de GEDITEC'
+    // })
+
   }
 }

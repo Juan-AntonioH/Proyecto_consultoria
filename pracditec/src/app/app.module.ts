@@ -31,6 +31,7 @@ import { EmpleoComponent } from './pages/empleo/empleo.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { ContactosComponent } from './pages/componentes/contactos/contactos.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -66,7 +67,9 @@ import { ContactosComponent } from './pages/componentes/contactos/contactos.comp
     BrowserAnimationsModule,
     AppRoutingModule,
     FontAwesomeModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,11 @@
+.input-invalid {
+  border: solid 3px red;
+}
+
+.input-valid {
+  border: solid 3px green;
+}
+
 .contacto-maps {
   max-width: 100%;
   width: 100%;
@@ -6,6 +14,7 @@
   border: none;
   height: 600px;
 }
+
 .tituloContacto {
   font-size: 49px;
   text-align: center;
@@ -36,6 +45,15 @@
   margin-bottom: 20px;
   display: flex;
   margin-top: 5px;
+}
+
+.c-formContacto__error {
+  position: relative;
+  top: -18px
+}
+.c-formContacto__mensaje{
+  width: fit-content;
+  margin: auto;
 }
 
 .c-formContacto__boton {

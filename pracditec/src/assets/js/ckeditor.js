@@ -1,5 +1,7 @@
-const body_new = document.getElementById( 'mensajeContacto' );
-const editorConfiguration = {toolbar: {
+
+mensajeContacto = document.getElementById( 'mensajeContacto' );
+
+editorConfiguration = {toolbar: {
         items: [
             'findAndReplace', 'selectAll', '|',
             'heading', '|',
@@ -112,4 +114,4 @@ const editorConfiguration = {toolbar: {
         'FormatPainter',
         'TableOfContents'
     ]};
-CKEDITOR.ClassicEditor.create(body_new, editorConfiguration).catch(e=>console.log(e));
+CKEDITOR.ClassicEditor.create(mensajeContacto, editorConfiguration).catch(e=>console.log(e));
