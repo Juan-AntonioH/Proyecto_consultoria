@@ -6,6 +6,24 @@
   border: solid 3px green;
 }
 
+.status200 {
+  border: solid 1px white;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px;
+}
+
+.status400 {
+  border: solid 1px #16558F;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px;
+}
+
 .contacto-maps {
   max-width: 100%;
   width: 100%;
@@ -51,7 +69,8 @@
   position: relative;
   top: -18px
 }
-.c-formContacto__mensaje{
+
+.c-formContacto__mensaje {
   width: fit-content;
   margin: auto;
 }

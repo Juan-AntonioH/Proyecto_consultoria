@@ -10,12 +10,12 @@
         <p class="mb-3">Estaremos encantados de tenerte en cuenta para futuras oportunidades de trabajo.</p>
       </div>
       <div class="row m-0">
-        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3"
-          src="assets/images/nosotros/MG_3733.webp" alt="imagen">
-        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3"
-          src="assets/images/nosotros/MG_4467.webp" alt="imagen">
-        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3"
-          src="assets/images/nosotros/MG_4231.webp" alt="imagen">
+        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3" src="assets/images/nosotros/MG_3733.webp"
+          alt="imagen">
+        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3" src="assets/images/nosotros/MG_4467.webp"
+          alt="imagen">
+        <img class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-fluid p-3" src="assets/images/nosotros/MG_4231.webp"
+          alt="imagen">
       </div>
     </div>
   </div>
@@ -23,18 +23,52 @@
 <section>
   <div class="container-fluid g--bg-color-2B2A2A text-white g--font-family-dm-sans py-5">
     <h2 class="tituloCurriculum">Envíanos tu CV</h2>
-    <form class="c-formCurriculum">
-      <input id="nombre" class="c-formCurriculum__input" type="text" name="nombre" placeholder="Nombre completo"
+    <form [formGroup]="formularioEmpleo" class="c-formCurriculum" (ngSubmit)="submit()">
+      <input id="nombre" formControlName="nombre" class="c-formCurriculum__input" type="text" name="nombre"
+        placeholder="Nombre completo" minlength="2" maxlength="30" [ngClass]="getCampoClases('nombre')" required>
+      <span class="c-formEmpleo__error"
+        *ngIf="formularioEmpleo.get('nombre')?.invalid && formularioEmpleo.get('nombre')?.touched">
+        El nombre es obligatorio.
+      </span>
+      <input id="email" formControlName="email" class="c-formCurriculum__input" type="text" name="email"
+        placeholder="Email" [ngClass]="getCampoClases('email')" required>
+      <span class="c-formEmpleo__error"
+        *ngIf="formularioEmpleo.get('email')?.invalid && formularioEmpleo.get('email')?.touched">
+        Introduce un email correcto.
+      </span>
+      <input id="movil" formControlName="movil" class="c-formCurriculum__input" type="text" name="movil"
+        placeholder="Móvil Ejemplo:656565656" minlength="7" maxlength="12" [ngClass]="getCampoClases('movil')" required>
+      <span class="c-formEmpleo__error"
+        *ngIf="formularioEmpleo.get('movil')?.invalid && formularioEmpleo.get('movil')?.touched">
+        Introduce un número correcto.
+      </span>
+      <input id="file" class="c-formCurriculum__file" type="file" name="file" formControlName="file" [ngClass]="getCampoClases('file')"
         required>
-      <input id="email" class="c-formCurriculum__input" type="text" name="email" placeholder="Email" required>
-      <input id="movil" class="c-formCurriculum__input" type="text" name="movil" placeholder="Móvil" required>
-      <input id="file" class="c-formCurriculum__file" type="file" name="file" required>
-      <div class="d-flex text-wrap  mb-3">
-        <input id="check" class="c-formCurriculum__check" type="checkbox" name="check" required>
+      <div class="c-formEmpleo__error mb-2"
+        *ngIf="formularioEmpleo.get('file')?.invalid && formularioEmpleo.get('file')?.touched">
+        Debes de poner tu curriculum.
+      </div>
+      <div class="d-flex text-wrap mb-3">
+        <input id="check" formControlName="check" class="c-formCurriculum__check" type="checkbox" name="check"
+          [ngClass]="getCampoClases('check')" required>
         <label for="check">Acepto las políticas de privacidad y registro de datos.</label>
       </div>
+      <div class="c-formEmpleo__error mb-2"
+        *ngIf="formularioEmpleo.get('check')?.invalid && formularioEmpleo.get('check')?.touched">
+        Debes aceptar las politicas de privacidad.
+      </div>
       <div class="d-flex justify-content-center">
-        <button id="btnForm" class="c-formCurriculum__boton" type="button">ENVIAR CONSULTA</button>
+        <button id="btnForm" class="c-formCurriculum__boton" type="submit">ENVIAR CONSULTA</button>
+      </div>
+      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="oculto" [ngClass]="{'input-invalid': formularioEmpleo.invalid,
+      'input-valid': formularioEmpleo.valid}">
+        <span class="text-center p-4" *ngIf="formularioEmpleo.invalid">
+          Hay datos inválidos en el formulario
+        </span>
+        <span class="text-center p-4" *ngIf="formularioEmpleo.valid">
+          Todos los datos son válidos
+        </span>
+        {{pruebas}}
       </div>
     </form>
   </div>

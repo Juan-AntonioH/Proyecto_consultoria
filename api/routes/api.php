@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\GameController;
+use App\Http\Controllers\Api\EmpleoController;
+use App\Http\Controllers\Api\ContactoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +20,9 @@ use App\Http\Controllers\Api\GameController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+// Route::get('games', function () {
+//     return response()->json("hola", 200);
+// });
 
-Route::apiResource('games',GameController::class);
+Route::post('contacto', [ContactoController::class, 'insert']);
+Route::post('empleo', [EmpleoController::class, 'insert']);

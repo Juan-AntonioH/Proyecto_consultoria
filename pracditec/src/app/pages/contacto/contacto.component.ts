@@ -1,6 +1,11 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Contacto } from 'src/app/modelos/contacto';
-import { FormBuilder, FormGroup, Validators, FormArrayName, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpContactoService } from 'src/app/servicios/http-contacto.service';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+// import { ChangeEvent } from '@ckeditor/ckeditor5-angular/ckeditor.component';
+
+// declare const CKEditor: any;
 
 @Component({
   selector: 'app-contacto',
@@ -8,12 +13,21 @@ import { FormBuilder, FormGroup, Validators, FormArrayName, FormControl } from '
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
-  mensajeContacto!:any
-  editorConfiguration!:Object
-  formularioContacto!: FormGroup;
-  resultado!: string;
-  oculto: boolean = true
-  constructor(private renderer: Renderer2, private formBuilder: FormBuilder) {
+  //   public onChange( { editor }: ChangeEvent ) {
+  //     this.mensajeContacto = editor.data.get();
+
+  //     console.log( this.mensajeContacto );
+  // }
+
+  mensaje: string = ''
+  // editorConfiguration!: Object
+  formularioContacto!: FormGroup
+  resultado!: string
+  estadoFormulario: boolean = true
+  respuestaEnvio: boolean = true
+  statusResponse!: boolean
+  Editor = ClassicEditor;
+  constructor(private renderer: Renderer2, private formBuilder: FormBuilder, private httpContacto: HttpContactoService) {
     this.createForm()
   }
 
@@ -28,7 +42,7 @@ export class ContactoComponent {
       Validators.maxLength(12),
       Validators.pattern(/^([0-9])*$/)]],
       empresa: ['', Validators.required],
-      // mensajeContacto: ['', [Validators.required, Validators.minLength(5)]],
+      mensaje: ['', [Validators.required, Validators.minLength(5)]],
       // file: ['', Validators.required],
       check: [false, Validators.requiredTrue]
     })
@@ -43,13 +57,17 @@ export class ContactoComponent {
     return '';
   }
   submit() {
-    this.oculto = false
+    this.estadoFormulario = false
+    this.respuestaEnvio = true
+
     if (this.formularioContacto.valid) {
-      this.resultado = "Todos los datos son válidos"
-      this.formularioContacto.reset()
-      this.oculto = true
-    } else {
-      this.resultado = "Hay datos inválidos en el formulario"
+      this.estadoFormulario = true
+      this.httpContacto.postFormularioContactos(this.formularioContacto.value).subscribe(
+        {
+          next: datos => { this.resultado = datos, this.formularioContacto.reset(), this.respuestaEnvio = false, this.statusResponse=true },
+          error: error => { console.log(error.error.message), this.respuestaEnvio = false, this.statusResponse=false }
+        }
+      )
     }
   }
 
@@ -83,16 +101,16 @@ export class ContactoComponent {
     },
   ]
 
-  loadScript() {
-    const script = this.renderer.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'assets/js/ckeditor.js';
-    this.renderer.appendChild(document.body, script);
-  }
+  // loadScript() {
+  //   const script = this.renderer.createElement('script');
+  //   script.type = 'text/javascript';
+  //   script.src = 'assets/js/ckeditor.js';
+  //   this.renderer.appendChild(document.body, script);
+  // }
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.loadScript();
-    }, 0);
-  }
+  // ngOnInit() {
+  //   setTimeout(() => {
+  //     this.loadScript();
+  //   }, 0);
+  // }
 }

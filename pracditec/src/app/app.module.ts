@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -32,6 +33,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { ContactosComponent } from './pages/componentes/contactos/contactos.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,9 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FontAwesomeModule,
     SlickCarouselModule,
     FormsModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

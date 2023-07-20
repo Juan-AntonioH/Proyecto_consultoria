@@ -1,3 +1,11 @@
+.input-invalid {
+  border: solid 3px red;
+}
+
+.input-valid {
+  border: solid 3px green;
+}
+
 .mensajeEmpleo {
   text-align: center;
   color: #2B2A2A;
@@ -36,6 +44,16 @@
   margin-bottom: 20px;
   display: flex;
   margin-top: 5px;
+}
+
+.c-formEmpleo__error {
+  position: relative;
+  top: -18px
+}
+
+.c-formContacto__mensaje {
+  width: fit-content;
+  margin: auto;
 }
 
 .c-formCurriculum__boton {

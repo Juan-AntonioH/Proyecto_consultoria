@@ -52,17 +52,23 @@
           </span>
         </div>
       </div>
-      <div class="text-black mb-3">
-        <textarea id="mensajeContacto" class="c-formContacto__input" name="mensajeContacto"
-          placeholder="Mensaje"></textarea>
+      <div class="text-black mb-3" [ngClass]="getCampoClases('mensaje')">
+        <ckeditor tagName="textarea" formControlName="mensaje" name="mensaje" [editor]="Editor"
+          [(ngModel)]="mensaje"></ckeditor>
+        <!-- <textarea id="mensaje" class="c-formContacto__input" name="mensaje"
+          placeholder="Mensaje"></textarea> -->
       </div>
-      <input id="file" class="c-formContacto__file" type="file" name="file" [ngClass]="getCampoClases('file')">
+      <span class="c-formContacto__error"
+        *ngIf="formularioContacto.get('mensaje')?.invalid && formularioContacto.get('mensaje')?.touched">
+        Introduce un mensaje.
+      </span>
+      <!-- <input id="file" class="c-formContacto__file" type="file" name="file" [ngClass]="getCampoClases('file')"> -->
       <div class="d-flex text-wrap mb-lg-0 mb-md-0 mb-2 ">
         <input id="check" formControlName="check" class="c-formContacto__check" type="checkbox" name="check"
           [ngClass]="getCampoClases('check')" required>
         <label for="check">Acepto las políticas de privacidad y registro de datos.</label>
       </div>
-      <div class="c-formContacto__error mb-2"
+      <div class="c-formContacto__error my-2"
         *ngIf="formularioContacto.get('check')?.invalid && formularioContacto.get('check')?.touched">
         Debes aceptar las politicas de privacidad.
       </div>
@@ -76,7 +82,7 @@
       <div class="d-flex justify-content-center">
         <button id="btnForm" class="c-formContacto__boton" type="submit">ENVIAR CONSULTA</button>
       </div>
-      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="oculto" [ngClass]="{'input-invalid': formularioContacto.invalid,
+      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="estadoFormulario" [ngClass]="{'input-invalid': formularioContacto.invalid,
       'input-valid': formularioContacto.valid}">
         <span class="text-center p-4" *ngIf="formularioContacto.invalid">
           Hay datos inválidos en el formulario
@@ -85,6 +91,11 @@
           Todos los datos son válidos
         </span>
       </div>
+      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="respuestaEnvio" [ngClass]="statusResponse ? 'status200' : 'status400'">
+      <span class="text-center p-4">
+        {{resultado}}
+      </span>
+    </div>
     </form>
   </div>
 </section>
