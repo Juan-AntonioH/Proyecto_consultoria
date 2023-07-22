@@ -3,6 +3,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { ScrollServiceService } from '../servicios/scroll-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { HttpNewsletterService } from '../servicios/http-newsletter.service';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 export class FooterComponent {
   formularioNewsletter!: FormGroup
 
-  constructor(private scrollService: ScrollServiceService, private formBuilder: FormBuilder) {
+  constructor(private scrollService: ScrollServiceService, private formBuilder: FormBuilder, private httpNewsletter: HttpNewsletterService) {
     this.formularioNewsletter = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email,
       Validators.pattern(/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/)]]
@@ -21,14 +22,16 @@ export class FooterComponent {
   flechaArriba = faArrowUp;
 
   submit() {
-this.toast(true,"pepe")
+
     if (this.formularioNewsletter.valid) {
-      // this.httpContacto.postFormularioContactos(this.formularioContacto.value).subscribe(
-      //   {
-      //     next: datos => { this.resultado = datos, this.formularioContacto.reset(), this.respuestaEnvio = false, this.statusResponse=true },
-      //     error: error => { console.log(error.error.message), this.respuestaEnvio = false, this.statusResponse=false }
-      //   }
-      // )
+      this.httpNewsletter.postFormularioNewsletter(this.formularioNewsletter.value).subscribe(
+        {
+          next: datos => { this.toast(true, datos), this.formularioNewsletter.reset() },
+          error: error => { this.toast(false, error.error) }
+        }
+      )
+    } else {
+      this.toast(false, "Correo electrónico no valido")
     }
   }
 

@@ -17,12 +17,17 @@ class EloquentContactoDAO implements ContactosDAO
      */
     public function insert(ContactosDTO $contactos): bool
     {
-        $contacto = new Contacto();
+
+
+
+        if (!($contacto =Contacto::where('email',$contactos->email())->first())) {
+            $contacto = new Contacto();
+        }
 
         $contacto->nombre = $contactos->nombre();
         $contacto->email = $contactos->email();
         $contacto->movil = $contactos->movil();
-        $contacto->empresa =$contactos->empresa();
+        $contacto->empresa = $contactos->empresa();
         $contacto->mensaje = $contactos->mensaje();
 
         return $contacto->save();

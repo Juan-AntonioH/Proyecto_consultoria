@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\EmpleoController;
 use App\Http\Controllers\Api\ContactoController;
-
+use App\Http\Controllers\Api\NewsletterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ use App\Http\Controllers\Api\ContactoController;
 
 Route::post('contacto', [ContactoController::class, 'insert']);
 Route::post('empleo', [EmpleoController::class, 'insert']);
+Route::post('newsletter', [NewsletterController::class, 'insert']);

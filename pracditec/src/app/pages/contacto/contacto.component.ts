@@ -65,7 +65,7 @@ export class ContactoComponent {
       this.httpContacto.postFormularioContactos(this.formularioContacto.value).subscribe(
         {
           next: datos => { this.resultado = datos, this.formularioContacto.reset(), this.respuestaEnvio = false, this.statusResponse=true },
-          error: error => { console.log(error.error.message), this.respuestaEnvio = false, this.statusResponse=false }
+          error: error => { this.resultado = error.error, this.respuestaEnvio = false, this.statusResponse=false }
         }
       )
     }

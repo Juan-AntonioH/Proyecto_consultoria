@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('newsletters', function (Blueprint $table) {
             $table->id();
             $table->string("email")->unique();
-            $table->boolean("active");
+            $table->boolean("active")->default(1);
             $table->boolean("deleted")->default(0);
             $table->timestamps();
         });

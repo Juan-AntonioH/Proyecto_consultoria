@@ -6,7 +6,7 @@
           <h2 class="c-footer-recibir-novedades__titulo">Recibe en tu correo novedades sobre nuevos proyectos y servicios</h2>
         </div>
         <form class="row m-0 col-lg-6 col-md-12" [formGroup]="formularioNewsletter" (ngSubmit)="submit()">
-          <input id="emailNovedades" class="col-lg-5 col-md-6 col-sm-12 me-md-5 mb-2" type="text" name="emailNovedades"
+          <input id="emailNovedades" formControlName="email" class="col-lg-5 col-md-6 col-sm-12 me-md-5 mb-2" type="text" name="emailNovedades"
             placeholder="Tu correo electrónico">
           <button id="botonNovedades" type="submit" class="col-lg-5 col-md-5 cold-sm-12 mb-2">Recibir Novedades</button>
         </form>
