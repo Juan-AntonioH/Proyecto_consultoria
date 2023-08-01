@@ -53,8 +53,8 @@
         </div>
       </div>
       <div class="text-black mb-3" [ngClass]="getCampoClases('mensaje')">
-        <ckeditor tagName="textarea" formControlName="mensaje" name="mensaje" [editor]="Editor"
-          [(ngModel)]="mensaje"></ckeditor>
+        <ckeditor tagName="textarea" formControlName="mensaje" name="mensaje" [editor]="Editor" [(ngModel)]="mensaje">
+        </ckeditor>
         <!-- <textarea id="mensaje" class="c-formContacto__input" name="mensaje"
           placeholder="Mensaje"></textarea> -->
       </div>
@@ -82,7 +82,8 @@
       <div class="d-flex justify-content-center">
         <button id="btnForm" class="c-formContacto__boton" type="submit">ENVIAR CONSULTA</button>
       </div>
-      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="estadoFormulario" [ngClass]="{'input-invalid': formularioContacto.invalid,
+      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="estadoFormulario"
+        [ngClass]="{'input-invalid': formularioContacto.invalid,
       'input-valid': formularioContacto.valid}">
         <span class="text-center p-4" *ngIf="formularioContacto.invalid">
           Hay datos inválidos en el formulario
@@ -91,11 +92,12 @@
           Todos los datos son válidos
         </span>
       </div>
-      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="respuestaEnvio" [ngClass]="statusResponse ? 'status200' : 'status400'">
-      <span class="text-center p-4">
-        {{resultado}}
-      </span>
-    </div>
+      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="respuestaEnvio"
+        [ngClass]="statusResponse ? 'status200' : 'status400'">
+        <span class="text-center p-4">
+          {{resultado}}
+        </span>
+      </div>
     </form>
   </div>
 </section>

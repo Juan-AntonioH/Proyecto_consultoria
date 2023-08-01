@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Contacto } from 'src/app/modelos/contacto';
+import { HttpEmpleoService } from 'src/app/servicios/http-empleo.service';
 
 @Component({
   selector: 'app-empleo',
@@ -9,10 +10,11 @@ import { Contacto } from 'src/app/modelos/contacto';
 })
 export class EmpleoComponent {
   formularioEmpleo!: FormGroup;
-  resultado!: string;
-  pruebas!: string;
-  oculto: boolean = true
-  constructor(private formBuilder: FormBuilder) {
+  resultado!: string
+  estadoFormulario: boolean = true
+  respuestaEnvio: boolean = true
+  statusResponse!: boolean
+  constructor(private formBuilder: FormBuilder, private httpEmpleo: HttpEmpleoService) {
     this.createForm()
   }
 
@@ -41,17 +43,8 @@ export class EmpleoComponent {
     return '';
   }
   submit() {
-    this.oculto = false
-    if (this.formularioEmpleo.valid) {
-      this.resultado = "Todos los datos son válidos"
-      // this.formularioEmpleo.reset()
-      this.oculto = true
-      // this.httpContacto.getpruebas().subscribe(
-      //   {
-      //     next: datos => { this.pruebas = datos, console.log(datos) },
-      //     error: error => console.log(error)
-      //   }
-      // )
+    this.estadoFormulario = false
+    this.respuestaEnvio = true
 
       const formData = new FormData();
       formData.append('nombre', this.formularioEmpleo.get('nombre')?.value);
@@ -62,15 +55,31 @@ export class EmpleoComponent {
         const archivo = archivoInput.files[0];
         formData.append('file', archivo, archivo.name);
       }
+
+        if (this.formularioEmpleo.valid) {
+      this.estadoFormulario = true
+      this.httpEmpleo.postFormularioEmpleo(formData).subscribe(
+        {
+          next: datos => {
+            this.resultado = "Formulario enviado correctamente", this.formularioEmpleo.reset(), this.respuestaEnvio = false, this.statusResponse=true,
+            console.log(datos)
+           },
+          error: error => { this.resultado = error.error, this.respuestaEnvio = false, this.statusResponse=false }
+        }
+      )
+    }
+  }
       // if (archivo instanceof File) {
       //   formData.append('file', archivo, archivo.name);
       // }
-      console.log(this.formularioEmpleo.value)
-      console.log(formData)
-    } else {
-      this.resultado = "Hay datos inválidos en el formulario"
-    }
-  }
+
+      // console.log(this.formularioEmpleo.value)
+      // console.log("separador")
+      // console.log(formData)
+
+    // } else {
+    //   this.resultado = "Hay datos inválidos en el formulario"
+    // }
 
   tituloInicial = {
     "tipo": "BUSCAMOS TALENTO",

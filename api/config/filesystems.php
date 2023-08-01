@@ -55,6 +55,13 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
+        'pdfs' => [
+            'driver' => 'local',
+            'root' => public_path('uploads/pdfs'), // Ruta para guardar los archivos PDF dentro de "public/uploads/pdfs"
+            'url' => env('APP_URL').'/uploads/pdfs', // URL para acceder a los archivos a través del navegador
+            'visibility' => 'public',
+        ],
+
 
     ],
 

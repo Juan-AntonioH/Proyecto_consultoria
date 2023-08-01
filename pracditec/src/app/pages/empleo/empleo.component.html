@@ -23,7 +23,7 @@
 <section>
   <div class="container-fluid g--bg-color-2B2A2A text-white g--font-family-dm-sans py-5">
     <h2 class="tituloCurriculum">Envíanos tu CV</h2>
-    <form [formGroup]="formularioEmpleo" class="c-formCurriculum" (ngSubmit)="submit()">
+    <form [formGroup]="formularioEmpleo" class="c-formCurriculum" (ngSubmit)="submit()" enctype="multipart/form-data">
       <input id="nombre" formControlName="nombre" class="c-formCurriculum__input" type="text" name="nombre"
         placeholder="Nombre completo" minlength="2" maxlength="30" [ngClass]="getCampoClases('nombre')" required>
       <span class="c-formEmpleo__error"
@@ -42,8 +42,8 @@
         *ngIf="formularioEmpleo.get('movil')?.invalid && formularioEmpleo.get('movil')?.touched">
         Introduce un número correcto.
       </span>
-      <input id="file" class="c-formCurriculum__file" type="file" name="file" formControlName="file" [ngClass]="getCampoClases('file')"
-        required>
+      <input id="file" class="c-formCurriculum__file" type="file" name="file" formControlName="file"
+        [ngClass]="getCampoClases('file')" required>
       <div class="c-formEmpleo__error mb-2"
         *ngIf="formularioEmpleo.get('file')?.invalid && formularioEmpleo.get('file')?.touched">
         Debes de poner tu curriculum.
@@ -60,7 +60,8 @@
       <div class="d-flex justify-content-center">
         <button id="btnForm" class="c-formCurriculum__boton" type="submit">ENVIAR CONSULTA</button>
       </div>
-      <div class="c-formContacto__error c-formContacto__mensaje mb-2 mt-2 text-center" [hidden]="oculto" [ngClass]="{'input-invalid': formularioEmpleo.invalid,
+      <div class="c-formContacto__error c-formEmpleo__mensaje mb-2 mt-2 text-center" [hidden]="estadoFormulario"
+        [ngClass]="{'input-invalid': formularioEmpleo.invalid,
       'input-valid': formularioEmpleo.valid}">
         <span class="text-center p-4" *ngIf="formularioEmpleo.invalid">
           Hay datos inválidos en el formulario
@@ -68,7 +69,12 @@
         <span class="text-center p-4" *ngIf="formularioEmpleo.valid">
           Todos los datos son válidos
         </span>
-        {{pruebas}}
+      </div>
+      <div class="c-formEmpleo__error c-formEmpleo__mensaje mb-2 mt-2 text-center" [hidden]="respuestaEnvio"
+        [ngClass]="statusResponse ? 'status200' : 'status400'">
+        <span class="text-center p-4">
+          {{resultado}}
+        </span>
       </div>
     </form>
   </div>

@@ -34,6 +34,7 @@ import { Error404Component } from './pages/error404/error404.component';
 import { ContactosComponent } from './pages/componentes/contactos/contactos.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     EmpleoComponent,
     ContactoComponent,
     Error404Component,
-    ContactosComponent
+    ContactosComponent,
+    AvisoLegalComponent
   ],
   imports: [
     BrowserModule,

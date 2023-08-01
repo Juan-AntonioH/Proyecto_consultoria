@@ -12,12 +12,14 @@ import { SectorAgroalimentarioComponent } from './pages/sector-agroalimentario/s
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { EmpleoComponent } from './pages/empleo/empleo.component';
+import { AvisoLegalComponent } from './pages/aviso-legal/aviso-legal.component';
 
 const routes: Routes = [
   { path: "", component: InicioComponent },
   { path: "nosotros", component: NosotrosComponent },
   { path: "contacto", component: ContactoComponent },
   { path: "empleo", component: EmpleoComponent },
+  { path: "aviso-legal", component: AvisoLegalComponent },
   { path: "servicios/obra-civil-industrial", component: ObraCivilIndustrialComponent },
   { path: "servicios/instalaciones-industriales", component: InstalacionesIndustrialesComponent },
   { path: "servicios/distribucion-servicios", component: DistribucionServiciosComponent },
